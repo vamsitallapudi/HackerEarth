@@ -1,4 +1,4 @@
-package com.coderefer;
+package main;
 
 public class Main {
 
