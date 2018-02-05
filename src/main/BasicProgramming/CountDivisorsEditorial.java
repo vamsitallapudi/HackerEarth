@@ -1,4 +1,4 @@
-package main;
+package main.BasicProgramming;
 
 import java.util.Scanner;
 
@@ -16,6 +16,8 @@ public class CountDivisorsEditorial {
         * No of numbers divisible by k in range from 1 to r is r/k. So the no. of numbers divisible by l in range from l to r is (r/k) - ((l-1)/k))
         * since nos divisible by k in  1 to l-1 range is (l-1)/k
         * */
-        System.out.println((r-(l-1))/k);
+        long x = (r-l+1)/k;
+        System.out.println(x);
+        System.out.println((r/k)-((l-1)/k));
     }
 }
