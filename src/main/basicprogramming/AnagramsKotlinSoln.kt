@@ -1,4 +1,4 @@
-package main.BasicProgramming
+package main.basicprogramming
 
 fun main(args: Array<String>) {
     val testCases = readLine()!!.toInt()

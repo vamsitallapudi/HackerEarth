@@ -1,4 +1,4 @@
-package main.BasicProgramming;
+package main.basicprogramming;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

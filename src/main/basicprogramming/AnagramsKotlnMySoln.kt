@@ -1,4 +1,4 @@
-package main.BasicProgramming
+package main.basicprogramming
 
 //My implementation for Anagrams best solution in Kotlin Programming Language :)
 fun main(args: Array<String>) {
