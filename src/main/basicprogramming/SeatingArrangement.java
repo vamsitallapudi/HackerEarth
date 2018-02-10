@@ -14,10 +14,10 @@ public class SeatingArrangement {
         while (iter-- > 0) {
             int input = sc.nextInt();
             int rem = input %12;
-            int dividend = input/12;
+            int dividend = (input-1)/12;
             HashMap<Integer, String> output = fetchOutput(rem);
-            for ( Map.Entry<Integer, String> entry : output.entrySet()) {
-                Integer key = (dividend-1)* 12 * entry.getKey()+1;
+            for (Map.Entry<Integer, String> entry : output.entrySet()) {
+                Integer key = (dividend)* 12 + entry.getKey();
                 String value = entry.getValue();
                 System.out.println(key + " "+ value );
             }
@@ -33,28 +33,38 @@ public class SeatingArrangement {
             case 0:
                 hashMap.put(1,"WS");
                 return hashMap;
-//            case 6:
-//                return "7 WS";
-//            case 7:
-//                return "6 WS";
-//            case 2:
-//                return "11 MS";
-//            case 11:
-//                return "2 MS";
-//            case 5:
-//                return "8 MS";
-//            case 8:
-//                return "5 MS";
-//            case 3:
-//                return "10 AS";
-//            case 10:
-//                return "3 AS";
-//            case 4:
-//                return "9 AS";
-//            case 9:
-//                return "4 AS";
-                default:
-                    return null;
+            case 6:
+                hashMap.put(7,"WS");
+                return hashMap;
+            case 7:
+                hashMap.put(6,"WS");
+                return hashMap;
+            case 2:
+                hashMap.put(11,"MS");
+                return hashMap;
+            case 11:
+                hashMap.put(2, "MS");
+                return hashMap;
+            case 5:
+                hashMap.put(8, "MS");
+                return hashMap;
+            case 8:
+                hashMap.put(5, "MS");
+                return hashMap;
+            case 3:
+                hashMap.put(10, "AS");
+                return hashMap;
+            case 10:
+                hashMap.put(3, "AS");
+                return hashMap;
+            case 4:
+                hashMap.put(9, "AS");
+                return hashMap;
+            case 9:
+                hashMap.put(4, "AS");
+                return hashMap;
+            default:
+                return hashMap;
         }
     }
 }
