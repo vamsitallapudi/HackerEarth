@@ -25,6 +25,4 @@ public class Cipher {
         }
         System.out.println(String.copyValueOf(chars));
     }
-
-//        Epp-gsrzsCw-3-fi:Epivx5
 }
