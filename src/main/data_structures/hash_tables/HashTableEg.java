@@ -7,6 +7,8 @@ public class HashTableEg {
         countFrequency(chars);
     }
 
+
+//To count the frequency of each alphabet in a string
     private static void countFrequency(char[] chars) {
         for(char i='a';i<='z';i++){
 //            System.out.println(i);
