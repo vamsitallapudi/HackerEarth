@@ -11,10 +11,9 @@ public class HashTableEg {
 //To count the frequency of each alphabet in a string
     private static void countFrequency(char[] chars) {
         for(char i='a';i<='z';i++){
-//            System.out.println(i);
             int freq = 0;
-            for(int j= 0; j<chars.length;j++){
-                if(chars[j] == i) {
+            for (char c : chars) {
+                if (c == i) {
                     ++freq;
                 }
             }
