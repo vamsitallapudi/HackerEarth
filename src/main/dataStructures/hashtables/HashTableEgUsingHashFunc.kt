@@ -1,4 +1,4 @@
-package main.data_structures.hash_tables
+package main.dataStructures.hashtables
 
 
 var frequency= Array(26,{0})
@@ -17,7 +17,6 @@ fun countFreq(s:String){
         frequency[index]++
     }
     for(i in 0..25){
-
         println("${i.toChar() + 'a'.toInt()} ${frequency[i]}")
     }
 }
