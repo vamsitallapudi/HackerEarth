@@ -1,14 +1,14 @@
 package main.dataStructures.hashtables
 
-val carSpeed = HashMap<Int, Int>()
 fun main(args: Array<String>) {
     var iter = readLine()!!.toInt()
     while (iter-- > 0) {
+        val carSpeed = HashMap<Int, Long>()
         val noOfCars = readLine()!!.toInt()
         val speedOfCars = readLine()!!.split(" ")
 
-        for(i in speedOfCars.indices){
-            carSpeed[i] = speedOfCars[i].toInt()
+        for(i in 0 until noOfCars){
+            carSpeed[i] = speedOfCars[i].toLong()
         }
 
         var count = 0
@@ -17,7 +17,9 @@ fun main(args: Array<String>) {
                 if(i.value > carSpeed[j]!!){
                     break
                 }
-                count++
+                if(i.key == j){
+                    count += 1
+                }
             }
         }
         println(count)
