@@ -9,6 +9,7 @@ public class Factorial {
         System.out.println(fact(sc.nextInt()));
     }
     private static int fact(int n){
+        //Return factorial of a given number
         if(n<=1){
             return 1;
         }
