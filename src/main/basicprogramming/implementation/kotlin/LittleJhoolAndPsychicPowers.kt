@@ -8,6 +8,9 @@ fun main(args: Array<String>) {
 }
 
 private fun fortuneCounter(input: String) : Boolean{
+    /**
+     * To count the consecutive numbers side by side. If >6, then return false, else return true.
+    * */
     var consecutiveCount = 1
 
     for (i in 1 until input.length) {
