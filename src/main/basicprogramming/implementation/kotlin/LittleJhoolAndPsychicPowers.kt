@@ -8,18 +8,18 @@ fun main(args: Array<String>) {
 }
 
 private fun fortuneCounter(input: String) : Boolean{
-    var consecutiveCount = 0
+    var consecutiveCount = 1
 
     for (i in 1 until input.length) {
         if (input[i] == input[i - 1]) {
             consecutiveCount += 1
             if (consecutiveCount >= 6) {
-                return true
+                return false
             }
         } else if (consecutiveCount < 6) {
-            consecutiveCount = 0
+            consecutiveCount = 1
         }
 
     }
-    return false
+    return true
 }
