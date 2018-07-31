@@ -8,6 +8,7 @@ public class Cipher {
         char[] chars = sc.nextLine().toCharArray();
         int iter = sc.nextInt();
         for (int i = 0; i < chars.length; i++) {
+            //To determine, if the char is Letter or digit
             if (Character.isLetterOrDigit(chars[i])) {
                 int value = (int) chars[i];
                 for (int j = 0; j < iter; j++) {
