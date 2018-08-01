@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
 }
 
 fun ticTacToeLogic(line1:String, line2:String, line3:String, line4:String) :Boolean {
-//    TODO: need to change some logic in case of expected next move
+//    TODO: need to change some logic in case of expected next move for batman
 //    case1: if all the values in a line (any horizontal line) are same
     if(allCharsAreEqual(line1) || allCharsAreEqual(line2) || allCharsAreEqual(line3) || allCharsAreEqual(line4)) {
         return true
