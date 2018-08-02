@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
 }
 
 fun ticTacToeLogic(line1:String, line2:String, line3:String, line4:String) : Boolean {
-//    TODO: need to change some logic in case of expected next move for batman
+//    TODO: need to change some logic in case of expected next move
 
 //    case -1 row check:
     if(performRowCheck(line1) || performRowCheck(line2)  || performRowCheck(line3) || performRowCheck(line4)) return true
