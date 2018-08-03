@@ -10,12 +10,7 @@ fun main(args: Array<String>) {
         val line3 = readLine()!!
         val line4 = readLine()!!
 
-        if(ticTacToeLogic(line1,line2,line3,line4)) {
-            println("YES")
-        } else {
-            println("NO")
-        }
-
+        if(ticTacToeLogic(line1,line2,line3,line4)) println("YES") else println("NO")
     }
 
 }
@@ -24,38 +19,31 @@ fun ticTacToeLogic(line1:String, line2:String, line3:String, line4:String) : Boo
 //    TODO: need to change some logic in case of expected next move
 
 //    case -1 row check:
-    if(performRowCheck(line1) || performRowCheck(line2)  || performRowCheck(line3) || performRowCheck(line4)) return true
+    if(checkPattern(line1) || checkPattern(line2)  || checkPattern(line3) || checkPattern(line4)) return true
 
 //    case -2 column check
-    if(performColumnCheck(line1,line2,line3,line4)) return true
+    else if(performColumnCheck(line1,line2,line3,line4)) return true
 
 //    case -3 diagonal check
-    if(performDiagonalCheck(line1, line2, line3, line4)) return true
+    else if(performDiagonalCheck(line1, line2, line3, line4)) return true
     return false
 }
 
 fun performDiagonalCheck(line1: String, line2: String, line3: String, line4: String): Boolean {
-
+//    small diagonals with 4 nodes
     val diagonalString1 = (line1[0].toString() + line2[1] + line3[2] + line4[3])
     val diagonalString2 = (line1[3].toString() + line2[2] + line3[1] + line4[0])
 
-    if(diagonalString1.contains("xx.") || diagonalString1.contains(".xx") || diagonalString1.contains("x.x")) return true
-    if(diagonalString2.contains("xx.") || diagonalString2.contains(".xx") || diagonalString2.contains("x.x")) return true
 
-//    small diagonals with 3 ends
+//    small diagonals with 3 nodes
     val diagonalString3 = (line1[1].toString() + line2[2] + line3[3])
     val diagonalString4 = (line1[2].toString() + line2[1] + line3[0])
     val diagonalString5 = (line2[0].toString() + line3[1] + line4[2])
     val diagonalString6 = (line2[2].toString() + line3[1] + line4[0])
     val diagonalString7 = (line2[3].toString() + line3[2] + line4[1])
 
-    if(diagonalString3.contains("xx.") || diagonalString3.contains(".xx") || diagonalString3.contains("x.x")) return true
-    if(diagonalString4.contains("xx.") || diagonalString4.contains(".xx") || diagonalString4.contains("x.x")) return true
-    if(diagonalString5.contains("xx.") || diagonalString5.contains(".xx") || diagonalString5.contains("x.x")) return true
-    if(diagonalString6.contains("xx.") || diagonalString6.contains(".xx") || diagonalString6.contains("x.x")) return true
-    if(diagonalString7.contains("xx.") || diagonalString7.contains(".xx") || diagonalString7.contains("x.x")) return true
+    return (checkPattern(diagonalString1) || checkPattern(diagonalString2) || checkPattern(diagonalString3) || checkPattern(diagonalString4) || checkPattern(diagonalString5) || checkPattern(diagonalString6) || checkPattern(diagonalString7))
 
-    return false
 }
 
 fun performColumnCheck(line1: String, line2: String, line3: String, line4: String): Boolean {
@@ -68,9 +56,6 @@ fun performColumnCheck(line1: String, line2: String, line3: String, line4: Strin
     return false
 }
 
-fun performRowCheck(line: String) :Boolean{
-    if(line.contains("xx.") || line.contains(".xx") || line.contains("x.x")){
-        return true
-    }
-    return false
+fun checkPattern(str:String) : Boolean{
+    return str.contains("xx.") || str.contains(".xx") || str.contains("x.x")
 }
