@@ -49,9 +49,7 @@ fun performDiagonalCheck(line1: String, line2: String, line3: String, line4: Str
 fun performColumnCheck(line1: String, line2: String, line3: String, line4: String): Boolean {
     for(i in 0..3) {
         val columnString = (line1[i].toString()+line2[i]+line3[i]+line4[i])
-        if(columnString.contains("xx.") ||columnString.contains("x.x") || columnString.contains(".xx")) {
-            return true
-        }
+        if(checkPattern(columnString)) return true
     }
     return false
 }
