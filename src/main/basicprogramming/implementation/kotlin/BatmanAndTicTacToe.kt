@@ -30,7 +30,7 @@ fun ticTacToeLogic(line1:String, line2:String, line3:String, line4:String) : Boo
 }
 
 fun performDiagonalCheck(line1: String, line2: String, line3: String, line4: String): Boolean {
-//    small diagonals with 4 nodes
+//    diagonals with 4 nodes
     val diagonalString1 = (line1[0].toString() + line2[1] + line3[2] + line4[3])
     val diagonalString2 = (line1[3].toString() + line2[2] + line3[1] + line4[0])
 
