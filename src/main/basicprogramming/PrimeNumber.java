@@ -29,6 +29,7 @@ public class PrimeNumber {
 
     private static boolean isPrime(int n) {
 // To check if a number is prime
+        //Added additional info as per request
         for(int i=2;i<=n/2; i++){
             if(n%i==0){
                 return false;
