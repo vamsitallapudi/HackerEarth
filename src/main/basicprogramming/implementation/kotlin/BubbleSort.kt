@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
         isSorted = true
         for (i in 0 until lastUnsorted) {
             if (intList[i] > intList[i + 1]) {
-                swap(intList, i, i + 1)
+                swapNum(intList, i, i + 1)
                 numSwaps++
                 isSorted = false
             }
@@ -26,7 +26,7 @@ fun main(args: Array<String>) {
     println("Last Element: ${intList[intList.size - 1]}")
 }
 
-fun swap(list: ArrayList<Int>, a: Int, b: Int) {
+fun swapNum(list: ArrayList<Int>, a: Int, b: Int) {
     val temp = list[b]
     list[b] = list[a]
     list[a] = temp
