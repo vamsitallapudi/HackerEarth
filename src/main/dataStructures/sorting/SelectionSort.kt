@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
                 cursorPlace = i
             }
         }
-        swap(numToSort,cursorPlace, toBeSorted)
+        swapElements(numToSort,cursorPlace, toBeSorted)
         toBeSorted++
         cursorPlace=toBeSorted
     }
@@ -19,7 +19,7 @@ fun main(args: Array<String>) {
         println(i)
     }
 }
-fun swap(a : ArrayList<Int>, b: Int, c:Int) {
+fun swapElements(a : ArrayList<Int>, b: Int, c:Int) {
     val temp = a[b]
     a[b] = a[c]
     a[c] = temp
