@@ -1,4 +1,4 @@
-package main.dataStructures.sorting
+package main.algorithms.sorting
 
 fun main(args: Array<String>) {
     val list = ArrayList(readLine()!!.split(" ").map { it.toInt() }) // 1)

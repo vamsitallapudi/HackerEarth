@@ -1,4 +1,4 @@
-package main.dataStructures.sorting
+package main.algorithms.sorting
 
 fun main(args: Array<String>) {
     var numSwaps = 0

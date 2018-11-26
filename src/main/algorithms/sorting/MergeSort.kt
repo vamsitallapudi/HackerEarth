@@ -1,4 +1,4 @@
-package main.dataStructures.sorting
+package main.algorithms.sorting
 
 fun main(args: Array<String>) {
     val array = readLine()!!.split(" ").map { it.toInt() }.toIntArray() // 1) Read the input and split into array

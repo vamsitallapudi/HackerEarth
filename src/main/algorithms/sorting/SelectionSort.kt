@@ -1,4 +1,4 @@
-package main.dataStructures.sorting
+package main.algorithms.sorting
 
 fun main(args: Array<String>) {
     val numToSort = ArrayList(readLine()!!.split(" ").map { it.toInt() }) // -> to read the input from console and to convert it to arraylist of integers
